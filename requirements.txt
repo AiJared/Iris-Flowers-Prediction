@@ -19,6 +19,7 @@ entrypoints==0.4
 executing==1.2.0
 fastjsonschema==2.16.2
 fqdn==1.5.1
+gunicorn==20.1.0
 idna==3.4
 importlib-metadata==6.0.0
 ipykernel==6.20.2
@@ -60,6 +61,7 @@ platformdirs==2.6.2
 prometheus-client==0.16.0
 prompt-toolkit==3.0.36
 psutil==5.9.4
+psycopg2-binary==2.9.5
 pure-eval==0.2.2
 pycparser==2.21
 Pygments==2.14.0
