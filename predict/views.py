@@ -3,7 +3,6 @@ from django.http import JsonResponse
 import pandas as pd
 from .models import PredResults
 
-
 def predict(request):
     return render(request, 'predict.html')
 
@@ -19,7 +18,7 @@ def predict_chances(request):
         petal_width = float(request.POST.get('petal_width'))
 
         # Unpickle model
-        model = pd.read_pickle(r"C:\Users\azander\Downloads\new_model.pickle")
+        model = pd.read_pickle(r"C:\Users\ojare\AIML\sk-django\Iris-flowers-project\new_model.pickle")
         # Make prediction
         result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
 
