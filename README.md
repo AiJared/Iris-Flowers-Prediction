@@ -1,1 +1,1 @@
-# YT-DjangoProject-Iris-App
+# Iris FLowers Prediction Django App
