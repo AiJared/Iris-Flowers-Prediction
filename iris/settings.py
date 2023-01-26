@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'IrisDB',
         'USER': "postgres",
-        'PASSWORD': "68@259779Ja",
+        'PASSWORD': "Ja@259779",
         "HOST": "127.0.0.1",
         'PORT': '5432'
     }
