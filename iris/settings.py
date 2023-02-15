@@ -7,7 +7,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DATABASE_URL = "postgresql://postgres:XXRxrOXVjhQnLBKvK7oR@containers-us-west-185.railway.app:7197/railway"
+# DATABASE_URL = "postgresql://postgres:XXRxrOXVjhQnLBKvK7oR@containers-us-west-185.railway.app:7197/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -66,8 +66,15 @@ WSGI_APPLICATION = 'iris.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+# }
+
 DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,  'db.sqlite3'),
+    }
 }
 
 
