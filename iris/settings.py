@@ -14,7 +14,7 @@ DATABASE_URL = "postgresql://postgres:lmnvSCLsdP88BRzGxWbV@containers-us-west-11
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '*e-vifgtz8^38rhj*x%&-k_&vs+v*24g1r_+#6atve@scpwylo'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
