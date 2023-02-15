@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+import os
 import pandas as pd
 from .models import PredResults
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def predict(request):
     return render(request, 'predict.html')
@@ -18,7 +21,7 @@ def predict_chances(request):
         petal_width = float(request.POST.get('petal_width'))
 
         # Unpickle model
-        model = pd.read_pickle(r"C:\Users\ojare\AIML\sk-django\Iris-flowers-project\new_model.pickle")
+        model = pd.read_pickle(os.path.join(BASE_DIR, "new_model.pickle"))
         # Make prediction
         result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
 
